@@ -19,7 +19,7 @@ Open the terminal, enter the following commands:
 <br>
 
 ```bash
-git clone https://github.com/Jui1710/ToDo-Backend.git
+$ git clone https://github.com/Jui1710/ToDo-Backend.git
 cd ToDo-Backend
 npm init
 node run dev
