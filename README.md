@@ -20,9 +20,9 @@ Open the terminal, enter the following commands:
 
 ```bash
 $ git clone https://github.com/Jui1710/ToDo-Backend.git
-cd ToDo-Backend
-npm init
-node run dev
+$ cd ToDo-Backend
+$ npm init
+$ node run dev
 ```
 
 ## Usage
