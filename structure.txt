@@ -1,0 +1,9 @@
+root -- app.js
+|
+-utils --> utility functions
+
+MVC(Model View Controller)
+
+Model == structure data, all classes and structure of my objects, database models, 
+View == Present data ---- UI how the applictation is presented
+Controller == updates the view backend 
