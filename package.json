@@ -8,7 +8,7 @@
     "dev": "nodemon -e js",
     "start": "node app.js"
   },
-  "author": "Juilee",
+  "author": "Juilee Bhombe",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
