@@ -14,7 +14,7 @@ REST APIs are created to perform the above operations. The project is build usin
 
 ## Requirements/Installation
 
-Make sure Node and Npm are installed(Refrence for installation: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) are installed on your machine.
+Make sure Node and Npm (Refrence for installation: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) are installed on your machine.
 Open the terminal, enter the following commands:
 <br>
 
