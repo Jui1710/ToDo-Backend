@@ -65,7 +65,7 @@ const addValidation = (req, res, next) => {
   const keys = Object.keys(req.body);
   const check = (keys, validKeys) =>
     validKeys.every((key) => keys.includes(key));
-  if (!check(keys, validKeys)) {
+  if (!check(keys, validKeys) || keys.length !== validKeys.length) {
     return sendResponse({
       res,
       statusCode: 400,
