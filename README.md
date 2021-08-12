@@ -162,7 +162,7 @@ _On incorrect body:_
 }
 ```
 
-_When there is a problm in file system or Task does not exists:_
+_When there is a problem in file system or Task does not exists:_
 
 ```json
 {
