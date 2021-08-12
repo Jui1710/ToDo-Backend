@@ -21,10 +21,31 @@
     "updatedAt": null
   },
   {
+<<<<<<< HEAD
     "taskId": "9vfje3eks8upi6f",
     "content": "updatedTask",
     "isComplete": "true",
     "createdAt": "Some Date",
     "updatedAt": "somedate"
+=======
+    "taskId": "9vfju62ks7rqlzd",
+    "content": "Task4",
+    "isComplete": false
+  },
+  {
+    "taskId": "9vfju62ks7rqvay",
+    "content": "updatedtask",
+    "isComplete": "true"
+  },
+  {
+    "taskId": "9vfj441ks8gv88y",
+    "content": "Task7",
+    "isComplete": false
+  },
+  {
+    "taskId": "9vfj441ks8gw0ln",
+    "content": "Task7",
+    "isComplete": false
+>>>>>>> ad9f8f1666204be910f418120a8d8e2fa22a0753
   }
 ]
