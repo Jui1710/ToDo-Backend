@@ -58,9 +58,10 @@ const addTask = (req, res, next) => {
 };
 
 const addValidation = (req, res, next) => {
-  let validKeys = ["content"];
+  let validKeys = ["content", "createdAt"];
   if (req.params.taskid) {
-    validKeys.push("isComplete");
+    validKeys.pop();
+    validKeys.push("isComplete", "updatedAt");
   }
   const keys = Object.keys(req.body);
   const check = (keys, validKeys) =>

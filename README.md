@@ -14,7 +14,7 @@ REST APIs are created to perform the above operations. The project is build usin
 
 ## Requirements/Installation
 
-Make sure Node and Npm (Refrence for installation: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) are installed on your machine.
+Make sure Node and Npm [Refrence for installation]:(https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) are installed on your machine.
 Open the terminal, enter the following commands:
 <br>
 
@@ -26,7 +26,6 @@ $ node run dev
 ```
 
 ## Usage
-
 
 To use the application, install Postman (Refrence for Installation: https://learning.postman.com/docs/getting-started/installation-and-updates/).
 
@@ -69,7 +68,6 @@ To use the application, install Postman (Refrence for Installation: https://lear
    ExampleUrl: http://localhost:3000/tasks/9vfju62ks7rqqyv <br>
 
 ## Documentation
-
 
 ### Task Structure
 
