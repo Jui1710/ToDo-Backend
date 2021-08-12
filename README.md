@@ -29,47 +29,147 @@ $ npm run start
 
 To use the application, install Postman (Refrence for Installation: https://learning.postman.com/docs/getting-started/installation-and-updates/).
 
-1. To fetch all Tasks:<br>
-   Method: GET<br>
-   RequestUrl: (localhostUrl)/tasks<br>
-   ExampleUrl: http://localhost:3000/tasks
+#### 1. To fetch all Tasks:<br>
 
-2. To fetch a specific Task: <br>
-   Method: GET<br>
-   RequestUrl: (localhostUrl)/tasks/:taskid<br>
-   ExampleUrl: http://localhost:3000/tasks/9vfju62ks7rqedw <br>
+**Method:** GET<br>
+**RequestUrl:** (localhostUrl)/tasks<br>
+**ExampleUrl:** http://localhost:3000/tasks<br>
+**Response:**<br>
+_On success:_<br>
 
-3. To add new Task:<br>
-   Method: POST<br>
-   RequestUrl: (localhostUrl)/tasks<br>
-   ExampleUrl: http://localhost:3000/tasks<br>
-   Request Body:<br>
-   (send raw json data or urlencoded data)<br>
-   Structure:<br>
-   ```json
-   {
-     "content": "task description",
-     "createdAt": "current date"
-   }
-   ```
-4. To update a Task:<br>
-   Method:PUT<br>
-   RequestUrl: (localhostUrl)/tasks/:taskid<br>
-   ExampleUrl: http://localhost:3000/tasks/9vfju62ks7rqedw<br>
-   Request Body:<br>
-   (send raw json data or urlencoded data)<br>
-   Structure:<br>
-   ```json
-   {
-     "content": "task description",
-     "isComplete": "boolean value(true/false)",
-     "updatedAt": "current date"
-   }
-   ```
-5. To delete a Task: <br>
-   Method: DELETE <br>
-   RequestUrl: (localhostUrl)/tasks/:taskid<br>
-   ExampleUrl: http://localhost:3000/tasks/9vfju62ks7rqqyv <br>
+```json
+{
+  "message": "Succesfully fetched all Tasks",
+  "data": [
+    {
+      "taskId": "9vfje3eks8umn4g",
+      "content": "Task1",
+      "isComplete": false,
+      "createdAt": "Some Date",
+      "updatedAt": null
+    },
+    {
+      "taskId": "9vfje3eks8umrpd",
+      "content": "Task2",
+      "isComplete": false,
+      "createdAt": "Some Date",
+      "updatedAt": null
+    }
+  ]
+}
+```
+
+#### 2. To fetch a specific Task: <br>
+
+**Method:** GET<br>
+**RequestUrl:** (localhostUrl)/tasks/:taskid<br>
+**ExampleUrl:** http://localhost:3000/tasks/9vfju62ks7rqedw <br>
+**Response:**<br>
+_On success:_<br>
+
+```json
+{
+  "message": "Succesfully fetched task",
+  "data": {
+    "taskId": "9vfje3eks8umrpd",
+    "content": "Task2",
+    "isComplete": false,
+    "createdAt": "Some Date",
+    "updatedAt": null
+  }
+}
+```
+
+#### 3. To add new Task:<br>
+
+**Method:** POST<br>
+**RequestUrl:** (localhostUrl)/tasks<br>
+**ExampleUrl:** http://localhost:3000/tasks<br>
+**Request Body:**<br>
+_(send raw json data or urlencoded data)_<br>
+**Structure:**<br>
+
+```json
+{
+  "content": "task description",
+  "createdAt": "current date"
+}
+```
+
+**Response:**<br>
+_On success:_<br>
+
+```json
+{
+  "message": "Succesfully created new task",
+  "data": {
+    "taskId": "9vfjhjwks8y9csl",
+    "content": "Task15",
+    "isComplete": false,
+    "createdAt": "some date",
+    "updatedAt": null
+  }
+}
+```
+
+#### 4. To update a Task:<br>
+
+**Method:**PUT<br>
+**RequestUrl:** (localhostUrl)/tasks/:taskid<br>
+**ExampleUrl:** http://localhost:3000/tasks/9vfju62ks7rqedw<br>
+**Request Body:**<br>
+_(send raw json data or urlencoded data)_<br>
+**Structure:**<br>
+
+```json
+{
+  "content": "task description",
+  "isComplete": "boolean value(true/false)",
+  "updatedAt": "current date"
+}
+```
+
+**Response:**<br>
+_On success:_<br>
+
+```json
+{
+  "message": "Succesfully updated task",
+  "data": {
+    "taskId": "9vfje3eks8umw6i",
+    "content": "updatedTask",
+    "isComplete": "true",
+    "createdAt": "Some Date",
+    "updatedAt": "somedate"
+  }
+}
+```
+
+#### 5. To delete a Task: <br>
+
+**Method:** DELETE <br>
+**RequestUrl:** (localhostUrl)/tasks/:taskid<br>
+**ExampleUrl:** http://localhost:3000/tasks/9vfju62ks7rqqyv <br>
+
+#### Common Responses:
+
+_On incorrect body:_
+
+```json
+{
+  "message": "Bad Request",
+  "error": "Bad Request"
+}
+```
+
+_When there is a problm in file system or Task does not exists:_
+
+```json
+{
+  "message": "Related Message",
+  "error": "Related error"
+}
+```
 
 ## Documentation
 
