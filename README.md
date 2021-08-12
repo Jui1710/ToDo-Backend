@@ -15,7 +15,6 @@ REST APIs are created to perform the above operations. The project is built usin
 ## Requirements/Installation
 
 Make sure Node and Npm [Refrence for installation]:(https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) are installed on your machine.
-
 Open the terminal, enter the following commands:
 <br>
 
@@ -28,7 +27,7 @@ $ npm run start
 
 ## Usage
 
-To use the application, install Postman ([Refrence for Installation](https://learning.postman.com/docs/getting-started/installation-and-updates/)).
+To use the application, install Postman (Refrence for Installation: https://learning.postman.com/docs/getting-started/installation-and-updates/).
 
 1. To fetch all Tasks:<br>
    Method: GET<br>

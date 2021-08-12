@@ -63,17 +63,16 @@ const addValidation = (req, res, next) => {
     validKeys.pop();
     validKeys.push("isComplete", "updatedAt");
   }
-  const keys = Object.keys(req.body);
-  const check = (keys, validKeys) =>
-    validKeys.every((key) => keys.includes(key));
-  if (!check(keys, validKeys) || keys.length !== validKeys.length) {
+
+  if (!validKeys.every((key) => Object.keys(req.body).includes(key))) {
     return sendResponse({
       res,
       statusCode: 400,
       message: "Bad Request",
       error: "Bad Request",
     });
-  } else next();
+  }
+  next();
 };
 
 const updateTask = (req, res, next) => {
