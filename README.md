@@ -10,11 +10,11 @@ The user can:
 4.  Update a Task
 5.  Delete a Task
 
-REST APIs are created to perform the above operations. The project is build using ExpressJS framework of NodeJS.
+REST APIs are created to perform the above operations. The project is built using ExpressJS framework of NodeJS.
 
 ## Requirements/Installation
 
-Make sure Node and Npm (Refrence for installation: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) are installed on your machine.
+Make sure Node and Npm ([Refrence for installation](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))are installed on your machine.
 Open the terminal, enter the following commands:
 <br>
 
@@ -22,50 +22,54 @@ Open the terminal, enter the following commands:
 $ git clone https://github.com/Jui1710/ToDo-Backend.git
 $ cd ToDo-Backend
 $ npm install
-$ node run dev
+$ npm run start
 ```
 
 ## Usage
 
 
-To use the application, install Postman (Refrence for Installation: https://learning.postman.com/docs/getting-started/installation-and-updates/).
+To use the application, install Postman ([Refrence for Installation](https://learning.postman.com/docs/getting-started/installation-and-updates/)).
 
 1. To fetch all Tasks:<br>
    Method: GET<br>
-   RequestUrl: http://localhost:3000/tasks<br>
+   RequestUrl: (localhostUrl)/tasks<br>
+   ExampleUrl: http://localhost:3000/tasks
 
 2. To fetch a specific Task: <br>
    Method: GET<br>
-   RequestUrl: http://localhost:3000/tasks/(Enter the taskid you want to fetch)<br>
+   RequestUrl: (localhostUrl)/tasks/:taskid<br>
    ExampleUrl: http://localhost:3000/tasks/9vfju62ks7rqedw <br>
 
 3. To add new Task:<br>
    Method: POST<br>
-   RequestUrl: http://localhost:3000/tasks<br>
+   RequestUrl: (localhostUrl)/tasks<br>
+   ExampleUrl: http://localhost:3000/tasks<br>
    Request Body:<br>
-   (send raw json data)<br>
-   Structure:<br>
-   ```json
-   {
-     "content": "task description"
-   }
-   ```
-4. To update a Task:<br>
-   Method:PUT<br>
-   RequestUrl: http://localhost:3000/tasks/(Enter the taskid you want to fetch)<br>
-   ExampleUrl: http://localhost:3000/tasks/9vfju62ks7rqedw<br>
-   Request Body:<br>
-   (send raw json data)<br>
+   (send raw json data or urlencoded data)<br>
    Structure:<br>
    ```json
    {
      "content": "task description",
-     "isComplete": "boolean value(true/false)"
+     "createdAt": "current date"     
+   }
+   ```
+4. To update a Task:<br>
+   Method:PUT<br>
+   RequestUrl: (localhostUrl)/tasks/:taskid<br>
+   ExampleUrl: http://localhost:3000/tasks/9vfju62ks7rqedw<br>
+   Request Body:<br>
+   (send raw json data or urlencoded data)<br>
+   Structure:<br>
+   ```json
+   {
+     "content": "task description",
+     "isComplete": "boolean value(true/false)",
+     "updatedAt": "current date"     
    }
    ```
 5. To delete a Task: <br>
    Method: DELETE <br>
-   RequestUrl: http://localhost:3000/tasks/(Enter the taskid you want to fetch) <br>
+   RequestUrl: (localhostUrl)/tasks/:taskid<br>
    ExampleUrl: http://localhost:3000/tasks/9vfju62ks7rqqyv <br>
 
 ## Documentation
@@ -77,7 +81,9 @@ To use the application, install Postman (Refrence for Installation: https://lear
 {
   "taskId": "unique id",
   "content": "task description",
-  "isComplete": "true/false"
+  "isComplete": "true/false",
+  "createdAt": "Date",
+  "updatedAt": "Date"
 }
 ```
 
